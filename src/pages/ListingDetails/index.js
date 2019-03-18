@@ -24,6 +24,7 @@ const ListingDetails = (props) => {
   return (
     <div>
       <AppBar
+        useDrawer
         left={(
           <img
             alt="back"
