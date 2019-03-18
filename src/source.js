@@ -10,7 +10,9 @@ const AppDataSource = {
       const res = await request.get(`${host}/BR_iOS_CodingExam_2015_Server/restaurants.json`);
       return res.body;
     } catch (err) {
-      return Promise.reject(new Error('Data feed is currently unavailable'));
+      // We want to handle the error without throwing
+      // eslint-disable-next-line prefer-promise-reject-errors
+      return Promise.reject('Data feed is currently unavailable');
     }
   }),
 };

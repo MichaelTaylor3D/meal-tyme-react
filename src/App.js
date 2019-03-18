@@ -31,6 +31,7 @@ class App extends ObserverComponent {
           {showProgressOverlay && <IndeterminateProgressOverlay />}
           <GlobalMsg message={AppStore.getGlobalMsg()} />
           <Route exact path="/" component={Pages.Home} />
+          {/* future routes to go here */}
         </div>
       </Router>
     );
