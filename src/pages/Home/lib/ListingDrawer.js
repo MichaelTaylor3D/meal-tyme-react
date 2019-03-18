@@ -7,13 +7,12 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 import ListingDetails from '../../ListingDetails';
 
-const drawerStyle = {
-  // use a smaller drawer for larger screens
-  width: window.innerWidth > 1000 ? '500px' : '95%',
-};
-
 const ListingDrawer = ({ clearSelectedListing, listing }) => {
   const shouldOpen = Boolean(listing);
+  const drawerStyle = {
+    // use a smaller drawer for larger screens
+    width: window.innerWidth > 1000 ? '500px' : '95%',
+  };
   return (
     <SwipeableDrawer
       open={shouldOpen}
