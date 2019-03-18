@@ -20,3 +20,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
+
+## To Deploy to Staging
+
+run `$ docker-compose up` in your staging env. This will download the app image from dockerhub and bind it to port 80.
