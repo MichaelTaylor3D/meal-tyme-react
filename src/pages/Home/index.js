@@ -28,6 +28,7 @@ class Home extends ObserverComponent {
 
   render() {
     const feed = AppStore.getFeed();
+
     if (_.isEmpty(feed)) {
       return null;
     }
