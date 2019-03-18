@@ -48,12 +48,12 @@ class Home extends ObserverComponent {
             />
           ))}
         </ul>
-        {selectedListing && (
-          <ListingDrawer
-            listing={selectedListing}
-            clearSelectedListing={this.onClearSelectedListing}
-          />
-        )}
+
+        <ListingDrawer
+          listing={selectedListing}
+          clearSelectedListing={this.onClearSelectedListing}
+        />
+
       </>
     );
   }
