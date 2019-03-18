@@ -1,26 +1,38 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-class App extends Component {
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+
+import * as Pages from './pages';
+
+import ObserverComponent from './lib/components/ObserverComponent';
+import IndeterminateProgressOverlay from './lib/components/IndeterminateProgressOverlay';
+import GlobalMsg from './lib/components/GlobalMsg';
+
+import AppActions from './actions';
+import AppStore from './store';
+
+import './App.scss';
+
+class App extends ObserverComponent {
+  constructor(props) {
+    super(props);
+
+    AppActions.getAppFeed();
+  }
+
   render() {
+    const showProgressOverlay = AppStore.shouldShowGlobalProgress();
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          {showProgressOverlay && <IndeterminateProgressOverlay />}
+          <GlobalMsg message={AppStore.getGlobalMsg()} />
+          <Route exact path="/" component={Pages.Home} />
+        </div>
+      </Router>
     );
   }
 }

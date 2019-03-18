@@ -1,0 +1,153 @@
+.app-bar {
+  padding: 0 12px 0 12px;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  color: white;
+  background: #43e895;
+  height: 64px; 
+  border-bottom: solid 1px #a7a7aa;
+
+  &__left {
+    img {
+      width: 50%;
+      /* thicken the image a little bit */
+      filter: drop-shadow(0px 0px 0px rgba(255,255,255,1));
+    }
+  }
+
+  &__middle {
+    font-size: 17px;
+    font-family: 'Avenir Next DemiBold';
+  }
+
+  &__right {
+
+  }
+}
+
+.listings {
+  display: flex;
+  flex-wrap: wrap; 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+
+  &__item {
+    width: 50%;
+    position: relative;
+    display: grid;
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
+
+    &__background {
+      width: 100%;
+    }
+  
+    &__gradient {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 6px;
+      padding-left: 12px;
+      font-family: 'Avenir Next DemiBold';
+  
+      &__category {
+        font-family: 'Avenir Next';
+        display: flex;
+      }
+    }
+  }
+}
+
+.map-location {
+  height: 180px;
+  width: 100%; 
+
+  &__marker {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: -50px;
+    top: -50px;
+    border-radius: 50px;
+    background: radial-gradient(
+      ellipse at center,
+       rgba(5,125,255,1) 0%,
+       rgba(5,125,255,1) 6%,
+       rgba(255,255,255,1) 7%,
+       rgba(255,255,255,1) 10%,
+       rgba(252,254,255,0.25) 11%,
+       rgba(5,125,255,0.25) 100%
+      ); 
+    
+
+    text-align: center;
+    color: #3f51b5;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 4px;
+  }
+}
+
+.summary-bar {
+  background: #34b379;
+  height: 60px;
+  position: relative;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+
+  &__name {
+    font-family: 'Avenir Next DemiBold';
+    padding-left: 12px;
+    font-size: 16px;
+  }
+
+  &__category {
+    font-family: 'Avenir Next';
+    padding-left: 12px;
+    font-size: 12px;
+  }
+}
+
+.contact-info {
+  /* 
+    requirements: 
+      12px from left
+      16px from top
+    To compensate for font alignment we will use the following values 
+  */
+  padding: 11px 0 0 10px;
+  line-height: 1.2;
+  font-size: 16px;
+
+  &__phone {
+    padding-top: 19px;
+    line-height: 1;
+  }
+
+  &__social {
+    padding-top: 26px;
+    line-height: 1;
+  }
+}
+
+.progess {
+  display: flex;
+}
+
+.snack-bar {
+  background-color: darkred;
+  &__message {
+    display: flex;
+    align-items: center;
+  }
+}
