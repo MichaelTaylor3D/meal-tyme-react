@@ -2,6 +2,8 @@
 
 This project was built in React using Mobx state management.
 
+Open [http://staging.bottle-rocket.tsaas.wod.by/](http://staging.bottle-rocket.tsaas.wod.by/) to view the staging site on your device.
+
 ## Available Scripts
 
 In the project directory, you can run:
