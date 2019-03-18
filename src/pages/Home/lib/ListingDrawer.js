@@ -13,7 +13,7 @@ const ListingDrawer = ({ clearSelectedListing, listing }) => {
     // use a smaller drawer for larger screens
     // calculate this dynamically
     // eslint-disable-next-line no-undef
-    width: window.innerWidth > 1000 ? '500px' : '95%',
+    width: window.innerWidth > 750 ? '500px' : '95%',
     overflow: 'hidden',
   };
   return (
