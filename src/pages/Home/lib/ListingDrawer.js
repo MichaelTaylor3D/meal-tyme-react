@@ -11,6 +11,7 @@ const ListingDrawer = ({ clearSelectedListing, listing }) => {
   const shouldOpen = Boolean(listing);
   const drawerStyle = {
     // use a smaller drawer for larger screens
+    // calculate this dynamically
     // eslint-disable-next-line no-undef
     width: window.innerWidth > 1000 ? '500px' : '95%',
   };
