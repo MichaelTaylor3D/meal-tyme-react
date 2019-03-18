@@ -23,4 +23,4 @@ Your app is ready to be deployed!
 
 ## To Deploy to Staging
 
-run `docker-compose up` in your staging env. This will download the app image from dockerhub and bind it to port 80.
+run `$ docker-compose up` in your staging env. This will download the app image from dockerhub and bind it to port 80.
