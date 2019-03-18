@@ -7,7 +7,6 @@ class AppActions {
       'activateGlobalProgress',
       'deactivateGlobalProgress',
       'setGlobalMsg',
-      ...asyncActions('loginUser'),
       ...asyncActions('getAppFeed'),
     );
   }
