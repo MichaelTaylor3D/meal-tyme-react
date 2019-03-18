@@ -25,7 +25,7 @@ const ListingDetails = (props) => {
     <div>
       <AppBar
         left={<img src={backButton} className="app-bar__left__img" title="back" alt="back" role="presentation" onClick={onGoBack} />}
-        middle="Lunch Tyme"
+        middle={<span>Lunch Tyme</span>}
       />
 
       <MapLocation

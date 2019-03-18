@@ -1,15 +1,20 @@
 .app-bar {
+  height: 64px;
+  color: white;
+  background: #43e895;
   padding: 0 12px 0 12px;
   display: flex;
   align-items: center; 
   justify-content: space-between; 
-  color: white;
-  background: #43e895;
-  height: 64px; 
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
   border-bottom: solid 1px #a7a7aa;
 
   &__left {
     display: flex;
+    width: 25px;
     img {
       width: 50%;
       height: 50%;
@@ -21,6 +26,15 @@
   &__middle {
     font-size: 17px;
     font-family: 'Avenir Next DemiBold';
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__right {
+    width: 25px;
+    font-size: 17px;
+    font-family: 'Avenir Next DemiBold';
   }
 }
 
@@ -28,7 +42,7 @@
   display: flex;
   flex-wrap: wrap; 
   list-style-type: none;
-  margin: 0;
+  margin: 64px 0 0 0;
   padding: 0;
   color: #ffffff;
 
@@ -68,6 +82,7 @@
 .map-location {
   height: 180px;
   width: 100%; 
+  margin-top: 64px;
 
   &__marker {
     position: relative;
