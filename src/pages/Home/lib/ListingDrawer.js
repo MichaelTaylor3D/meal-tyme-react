@@ -8,19 +8,18 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import ListingDetails from '../../ListingDetails';
 
 const drawerStyle = {
-  width: '95%',
+  // use a smaller drawer for larger screens
+  width: window.innerWidth > 1000 ? '500px' : '95%',
 };
 
 const ListingDrawer = ({ clearSelectedListing, listing }) => {
   const shouldOpen = Boolean(listing);
-
   return (
     <SwipeableDrawer
       open={shouldOpen}
       onClose={clearSelectedListing}
       onOpen={_.noop /* Only open on listing click */}
       PaperProps={{ style: drawerStyle }}
-      transitionDuration={10000}
     >
       {listing && (
         <ListingDetails listing={listing} onGoBack={clearSelectedListing} />
