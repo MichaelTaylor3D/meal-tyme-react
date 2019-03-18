@@ -14,7 +14,8 @@ const ListingDrawer = ({ clearSelectedListing, listing }) => {
     // calculate this dynamically
     // eslint-disable-next-line no-undef
     width: window.innerWidth > 750 ? '500px' : '95%',
-    overflow: 'hidden',
+    // fixes ipad scrolling in the drawer
+    overflowX: 'hidden',
   };
   return (
     <SwipeableDrawer
