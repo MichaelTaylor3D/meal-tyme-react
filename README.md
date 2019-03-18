@@ -1,6 +1,6 @@
 ## Bottle Rocket Test
 
-This project was build in React using Mobx state management.
+This project was built in React using Mobx state management.
 
 ## Available Scripts
 
