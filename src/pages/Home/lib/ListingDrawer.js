@@ -14,6 +14,7 @@ const ListingDrawer = ({ clearSelectedListing, listing }) => {
     // calculate this dynamically
     // eslint-disable-next-line no-undef
     width: window.innerWidth > 1000 ? '500px' : '95%',
+    overflow: 'hidden',
   };
   return (
     <SwipeableDrawer
