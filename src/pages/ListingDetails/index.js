@@ -24,7 +24,16 @@ const ListingDetails = (props) => {
   return (
     <div>
       <AppBar
-        left={<img src={backButton} className="app-bar__left__img" title="back" alt="back" role="presentation" onClick={onGoBack} />}
+        left={(
+          <img
+            alt="back"
+            className="app-bar__left__img"
+            onClick={onGoBack}
+            role="presentation"
+            src={backButton}
+            title="back"
+          />
+        )}
         middle={<span>Lunch Tyme</span>}
       />
 
